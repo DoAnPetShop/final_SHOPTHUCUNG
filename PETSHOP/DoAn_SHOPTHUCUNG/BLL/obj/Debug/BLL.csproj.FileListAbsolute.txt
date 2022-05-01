@@ -1,0 +1,9 @@
+C:\Users\DUYMANH\Desktop\FILE hoc tap nam 3 ky 2\Phat trien phan mem\PETSHOP\DoAn_SHOPTHUCUNG\BLL\bin\Debug\BLL.dll
+C:\Users\DUYMANH\Desktop\FILE hoc tap nam 3 ky 2\Phat trien phan mem\PETSHOP\DoAn_SHOPTHUCUNG\BLL\bin\Debug\BLL.pdb
+C:\Users\DUYMANH\Desktop\FILE hoc tap nam 3 ky 2\Phat trien phan mem\PETSHOP\DoAn_SHOPTHUCUNG\BLL\obj\Debug\BLL.dll
+C:\Users\DUYMANH\Desktop\FILE hoc tap nam 3 ky 2\Phat trien phan mem\PETSHOP\DoAn_SHOPTHUCUNG\BLL\obj\Debug\BLL.pdb
+C:\Users\DUYMANH\Desktop\FILE hoc tap nam 3 ky 2\Phat trien phan mem\PETSHOP\DoAn_SHOPTHUCUNG\BLL\bin\Debug\DAL.dll
+C:\Users\DUYMANH\Desktop\FILE hoc tap nam 3 ky 2\Phat trien phan mem\PETSHOP\DoAn_SHOPTHUCUNG\BLL\bin\Debug\DTO.dll
+C:\Users\DUYMANH\Desktop\FILE hoc tap nam 3 ky 2\Phat trien phan mem\PETSHOP\DoAn_SHOPTHUCUNG\BLL\bin\Debug\DAL.pdb
+C:\Users\DUYMANH\Desktop\FILE hoc tap nam 3 ky 2\Phat trien phan mem\PETSHOP\DoAn_SHOPTHUCUNG\BLL\bin\Debug\DTO.pdb
+C:\Users\DUYMANH\Desktop\FILE hoc tap nam 3 ky 2\Phat trien phan mem\PETSHOP\DoAn_SHOPTHUCUNG\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache

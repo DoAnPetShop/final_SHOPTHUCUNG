@@ -1,0 +1,5 @@
+C:\Users\DUYMANH\Desktop\FILE hoc tap nam 3 ky 2\Phat trien phan mem\PETSHOP\DoAn_SHOPTHUCUNG\DTO\bin\Debug\DTO.dll.config
+C:\Users\DUYMANH\Desktop\FILE hoc tap nam 3 ky 2\Phat trien phan mem\PETSHOP\DoAn_SHOPTHUCUNG\DTO\bin\Debug\DTO.dll
+C:\Users\DUYMANH\Desktop\FILE hoc tap nam 3 ky 2\Phat trien phan mem\PETSHOP\DoAn_SHOPTHUCUNG\DTO\bin\Debug\DTO.pdb
+C:\Users\DUYMANH\Desktop\FILE hoc tap nam 3 ky 2\Phat trien phan mem\PETSHOP\DoAn_SHOPTHUCUNG\DTO\obj\Debug\DTO.dll
+C:\Users\DUYMANH\Desktop\FILE hoc tap nam 3 ky 2\Phat trien phan mem\PETSHOP\DoAn_SHOPTHUCUNG\DTO\obj\Debug\DTO.pdb

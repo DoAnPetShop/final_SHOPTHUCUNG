@@ -227,4 +227,4 @@ select * from CTNHAPHANG
 select * from HOADON
 select * from CTHOADON
 select * from SANPHAM
-
+select SoLuong from SanPham where MASP = '2'

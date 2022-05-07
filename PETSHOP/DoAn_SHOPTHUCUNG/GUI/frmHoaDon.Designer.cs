@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHoaDon));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.bt_xoa = new System.Windows.Forms.Button();
             this.txt_masp = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
@@ -60,17 +60,22 @@
             this.bt_mua = new System.Windows.Forms.Button();
             this.txt_tongtien = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btn_xoa = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.number)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_CTHD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SanPham)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
-            this.groupBox2.Controls.Add(this.bt_xoa);
+            this.groupBox2.Controls.Add(this.btn_xoa);
             this.groupBox2.Controls.Add(this.txt_masp);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label);
@@ -91,20 +96,6 @@
             this.groupBox2.TabIndex = 66;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi Tiết Hóa Đơn";
-            // 
-            // bt_xoa
-            // 
-            this.bt_xoa.BackColor = System.Drawing.Color.Transparent;
-            this.bt_xoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bt_xoa.Enabled = false;
-            this.bt_xoa.FlatAppearance.BorderSize = 0;
-            this.bt_xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_xoa.Location = new System.Drawing.Point(347, 18);
-            this.bt_xoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bt_xoa.Name = "bt_xoa";
-            this.bt_xoa.Size = new System.Drawing.Size(57, 47);
-            this.bt_xoa.TabIndex = 46;
-            this.bt_xoa.UseVisualStyleBackColor = false;
             // 
             // txt_masp
             // 
@@ -164,6 +155,7 @@
             this.bt_them.Size = new System.Drawing.Size(59, 48);
             this.bt_them.TabIndex = 47;
             this.bt_them.UseVisualStyleBackColor = false;
+            this.bt_them.Click += new System.EventHandler(this.bt_them_Click);
             // 
             // txt_dongia
             // 
@@ -368,6 +360,7 @@
             this.dataGridView_SanPham.RowTemplate.Height = 24;
             this.dataGridView_SanPham.Size = new System.Drawing.Size(724, 204);
             this.dataGridView_SanPham.TabIndex = 68;
+            this.dataGridView_SanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_SanPham_CellClick);
             // 
             // button2
             // 
@@ -394,6 +387,7 @@
             this.bt_mua.Size = new System.Drawing.Size(88, 85);
             this.bt_mua.TabIndex = 71;
             this.bt_mua.UseVisualStyleBackColor = true;
+            this.bt_mua.Click += new System.EventHandler(this.bt_mua_Click);
             // 
             // txt_tongtien
             // 
@@ -412,6 +406,29 @@
             this.label8.Size = new System.Drawing.Size(77, 17);
             this.label8.TabIndex = 69;
             this.label8.Text = "Tổng Tiền:";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // btn_xoa
+            // 
+            this.btn_xoa.BackColor = System.Drawing.Color.Transparent;
+            this.btn_xoa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_xoa.BackgroundImage")));
+            this.btn_xoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_xoa.FlatAppearance.BorderSize = 0;
+            this.btn_xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_xoa.Location = new System.Drawing.Point(347, 18);
+            this.btn_xoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_xoa.Name = "btn_xoa";
+            this.btn_xoa.Size = new System.Drawing.Size(57, 46);
+            this.btn_xoa.TabIndex = 56;
+            this.btn_xoa.UseVisualStyleBackColor = false;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
             // frmHoaDon
             // 
@@ -439,6 +456,8 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_CTHD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SanPham)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -447,7 +466,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button bt_xoa;
         private System.Windows.Forms.TextBox txt_masp;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label;
@@ -477,5 +495,8 @@
         private System.Windows.Forms.Button bt_mua;
         private System.Windows.Forms.TextBox txt_tongtien;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.Button btn_xoa;
     }
 }

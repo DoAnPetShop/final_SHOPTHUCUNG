@@ -11,6 +11,7 @@ namespace GUI
 {
     public class QL_NguoiDung
     {
+        SqlCommand sqlcm;
         public int check_config()
         {
             if (Properties.Settings.Default.QL_SHOPTHUCUNG == string.Empty)
@@ -62,6 +63,20 @@ namespace GUI
             GUI.Properties.Settings.Default.QL_SHOPTHUCUNG = "Data Source=" + pServer +
             ";Initial Catalog=" + pDBname + ";User ID=" + pUser + ";pwd = " + pPass + "";
             GUI.Properties.Settings.Default.Save();
+        }
+        public int GetSoLuongSanPham(string pMasp)
+        {
+            SqlConnection _Sqlconn = new
+            SqlConnection(Properties.Settings.Default.QL_SHOPTHUCUNG);
+            string sql = "select SoLuong from SanPham where MASP = '" + pMasp + "' ";
+            if (_Sqlconn.State == ConnectionState.Closed)
+                _Sqlconn.Open();
+            sqlcm = new SqlCommand(sql, _Sqlconn);
+            int n = (int)sqlcm.ExecuteScalar();
+            _Sqlconn.Close();
+            return n;
+
+
         }
     }
 }

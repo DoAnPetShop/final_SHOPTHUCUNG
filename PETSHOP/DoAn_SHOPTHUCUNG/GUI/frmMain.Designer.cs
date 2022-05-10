@@ -34,12 +34,12 @@
             this.kếtNốiHệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trangChủToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhậpHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bánHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.báoCáoThốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.báoCáoTheoNgàyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.báoCáoTheoThángToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bánHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,20 +93,29 @@
             // nhậpHàngToolStripMenuItem
             // 
             this.nhậpHàngToolStripMenuItem.Name = "nhậpHàngToolStripMenuItem";
-            this.nhậpHàngToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.nhậpHàngToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.nhậpHàngToolStripMenuItem.Text = "Nhập hàng";
+            // 
+            // bánHàngToolStripMenuItem
+            // 
+            this.bánHàngToolStripMenuItem.Name = "bánHàngToolStripMenuItem";
+            this.bánHàngToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
+            this.bánHàngToolStripMenuItem.Text = "Bán hàng";
+            this.bánHàngToolStripMenuItem.Click += new System.EventHandler(this.bánHàngToolStripMenuItem_Click);
             // 
             // nhânViênToolStripMenuItem
             // 
             this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
             this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
             this.nhânViênToolStripMenuItem.Text = "Nhân viên";
+            this.nhânViênToolStripMenuItem.Click += new System.EventHandler(this.nhânViênToolStripMenuItem_Click);
             // 
             // thôngTinKháchHàngToolStripMenuItem
             // 
             this.thôngTinKháchHàngToolStripMenuItem.Name = "thôngTinKháchHàngToolStripMenuItem";
             this.thôngTinKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
             this.thôngTinKháchHàngToolStripMenuItem.Text = "Thông tin khách hàng";
+            this.thôngTinKháchHàngToolStripMenuItem.Click += new System.EventHandler(this.thôngTinKháchHàngToolStripMenuItem_Click);
             // 
             // báoCáoThốngKêToolStripMenuItem
             // 
@@ -122,19 +131,14 @@
             this.báoCáoTheoNgàyToolStripMenuItem.Name = "báoCáoTheoNgàyToolStripMenuItem";
             this.báoCáoTheoNgàyToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.báoCáoTheoNgàyToolStripMenuItem.Text = "Báo cáo theo ngày";
+            this.báoCáoTheoNgàyToolStripMenuItem.Click += new System.EventHandler(this.báoCáoTheoNgàyToolStripMenuItem_Click);
             // 
             // báoCáoTheoThángToolStripMenuItem
             // 
             this.báoCáoTheoThángToolStripMenuItem.Name = "báoCáoTheoThángToolStripMenuItem";
             this.báoCáoTheoThángToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.báoCáoTheoThángToolStripMenuItem.Text = "Báo cáo theo tháng";
-            // 
-            // bánHàngToolStripMenuItem
-            // 
-            this.bánHàngToolStripMenuItem.Name = "bánHàngToolStripMenuItem";
-            this.bánHàngToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.bánHàngToolStripMenuItem.Text = "Bán hàng";
-            this.bánHàngToolStripMenuItem.Click += new System.EventHandler(this.bánHàngToolStripMenuItem_Click);
+            this.báoCáoTheoThángToolStripMenuItem.Click += new System.EventHandler(this.báoCáoTheoThángToolStripMenuItem_Click);
             // 
             // frmMain
             // 

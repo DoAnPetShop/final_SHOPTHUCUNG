@@ -138,10 +138,10 @@ set dateformat dmy
 insert into NHAPHANG(MACC, NGAYNHAP) values('NCC001', getdate()),
 ('NCC001', getdate())
 insert into CTNHAPHANG (MANHAP, MASP,SOLUONG, DONGIA)
- values(3, 6, 3,1000000),
-(3, 7, 2,3000000),
-(3, 6, 3,1000000),
-(3, 7, 2,3000000)
+ values(1, 3, 10,1000000),
+(2, 14, 2,100000),
+(2, 5, 3,100000)
+
 
 --====================================HÓA ĐƠN
 set dateformat dmy

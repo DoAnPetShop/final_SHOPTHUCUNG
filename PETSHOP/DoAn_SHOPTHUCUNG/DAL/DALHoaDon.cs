@@ -24,7 +24,8 @@ namespace DAL
                 MAHD = l.MAHD,
                 MASP = l.MASP,
                 SOLUONG = l.SOLUONG,
-                DONGIA = l.DONGIA
+                DONGIA = l.DONGIA,
+                TONGTIEN = l.SOLUONG * l.DONGIA
               
 
             });

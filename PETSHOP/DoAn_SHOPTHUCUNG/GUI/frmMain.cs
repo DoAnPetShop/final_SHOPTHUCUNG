@@ -41,5 +41,33 @@ namespace GUI
             frmHD.MdiParent = this;
             frmHD.Show();
         }
+
+        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNhanVien frmNV = new frmNhanVien();
+            frmNV.MdiParent = this;
+            frmNV.Show();
+        }
+
+        private void thôngTinKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmKhachHang frmKH = new frmKhachHang();
+            frmKH.MdiParent = this;
+            frmKH.Show();
+        }
+
+        private void báoCáoTheoNgàyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBaoCaoNgay frmbaocaongay = new frmBaoCaoNgay();
+             frmbaocaongay.MdiParent = this;
+            frmbaocaongay.Show();
+        }
+
+        private void báoCáoTheoThángToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBaoCaoThang frmbaocaongay = new frmBaoCaoThang();
+            frmbaocaongay.MdiParent = this;
+            frmbaocaongay.Show();
+        }
     }
 }

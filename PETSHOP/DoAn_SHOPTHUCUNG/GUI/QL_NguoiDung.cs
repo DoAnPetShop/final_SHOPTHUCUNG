@@ -78,5 +78,26 @@ namespace GUI
 
 
         }
+        public int upDateSoLuongSanPham(int pMahd)
+        {
+            try
+            {
+            SqlConnection _Sqlconn = new
+            SqlConnection(Properties.Settings.Default.QL_SHOPTHUCUNG);
+            string sql = "Update SanPham set soluong = (select (SANPHAM.SOLUONG - CTHOADON.SOLUONG) from HOADON, CTHOADON where HOADON.MAHD = CTHOADON.MAHD and SANPHAM.MASP = CTHOADON.MASP and CTHOADON.MAHD = " + pMahd + ") where exists(select * from CTHOADON where SANPHAM.MASP = CTHOADON.MASP and CTHOADON.MAHD = " + pMahd + ")";
+            if (_Sqlconn.State == ConnectionState.Closed)
+                _Sqlconn.Open();
+            sqlcm = new SqlCommand(sql, _Sqlconn);
+            int n = sqlcm.ExecuteNonQuery();
+            _Sqlconn.Close();
+            return n;
+            }catch (SqlException e)
+              {
+                  return -1;
+              }
+            
+
+
+        }
     }
 }

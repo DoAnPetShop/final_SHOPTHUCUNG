@@ -41,6 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DALCBHoaDon.cs" />
+    <Compile Include="DALCBKhachHang.cs" />
+    <Compile Include="DALCBNhanVien.cs" />
+    <Compile Include="DALDemSoLuongSP.cs" />
+    <Compile Include="DALDoanhThu.cs" />
     <Compile Include="DALHoaDon.cs" />
     <Compile Include="DALSanPham.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

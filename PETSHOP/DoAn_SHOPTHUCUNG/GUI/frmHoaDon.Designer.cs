@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHoaDon));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_sua = new System.Windows.Forms.Button();
+            this.btn_xoa = new System.Windows.Forms.Button();
             this.txt_masp = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
@@ -41,7 +43,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.number = new System.Windows.Forms.NumericUpDown();
             this.cbo_mahd = new System.Windows.Forms.ComboBox();
-            this.bt_sua = new System.Windows.Forms.Button();
             this.bt_reset = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.bt_them2 = new System.Windows.Forms.Button();
@@ -62,7 +63,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btn_xoa = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.number)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -75,6 +75,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.btn_sua);
             this.groupBox2.Controls.Add(this.btn_xoa);
             this.groupBox2.Controls.Add(this.txt_masp);
             this.groupBox2.Controls.Add(this.label5);
@@ -86,16 +87,45 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.number);
             this.groupBox2.Controls.Add(this.cbo_mahd);
-            this.groupBox2.Controls.Add(this.bt_sua);
             this.groupBox2.Controls.Add(this.bt_reset);
             this.groupBox2.Location = new System.Drawing.Point(46, 20);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(404, 139);
+            this.groupBox2.Size = new System.Drawing.Size(404, 146);
             this.groupBox2.TabIndex = 66;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi Tiết Hóa Đơn";
+            // 
+            // btn_sua
+            // 
+            this.btn_sua.BackColor = System.Drawing.Color.Transparent;
+            this.btn_sua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_sua.BackgroundImage")));
+            this.btn_sua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_sua.FlatAppearance.BorderSize = 0;
+            this.btn_sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_sua.Location = new System.Drawing.Point(285, 70);
+            this.btn_sua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_sua.Name = "btn_sua";
+            this.btn_sua.Size = new System.Drawing.Size(57, 46);
+            this.btn_sua.TabIndex = 57;
+            this.btn_sua.UseVisualStyleBackColor = false;
+            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
+            // 
+            // btn_xoa
+            // 
+            this.btn_xoa.BackColor = System.Drawing.Color.Transparent;
+            this.btn_xoa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_xoa.BackgroundImage")));
+            this.btn_xoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_xoa.FlatAppearance.BorderSize = 0;
+            this.btn_xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_xoa.Location = new System.Drawing.Point(347, 18);
+            this.btn_xoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_xoa.Name = "btn_xoa";
+            this.btn_xoa.Size = new System.Drawing.Size(57, 46);
+            this.btn_xoa.TabIndex = 56;
+            this.btn_xoa.UseVisualStyleBackColor = false;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
             // txt_masp
             // 
@@ -186,27 +216,14 @@
             // 
             this.cbo_mahd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_mahd.FormattingEnabled = true;
+            this.cbo_mahd.Items.AddRange(new object[] {
+            "1"});
             this.cbo_mahd.Location = new System.Drawing.Point(99, 18);
             this.cbo_mahd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbo_mahd.Name = "cbo_mahd";
             this.cbo_mahd.Size = new System.Drawing.Size(157, 24);
             this.cbo_mahd.TabIndex = 31;
             this.cbo_mahd.SelectedIndexChanged += new System.EventHandler(this.cbo_mahd_SelectedIndexChanged);
-            // 
-            // bt_sua
-            // 
-            this.bt_sua.BackColor = System.Drawing.Color.Transparent;
-            this.bt_sua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_sua.BackgroundImage")));
-            this.bt_sua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bt_sua.Enabled = false;
-            this.bt_sua.FlatAppearance.BorderSize = 0;
-            this.bt_sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_sua.Location = new System.Drawing.Point(283, 71);
-            this.bt_sua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bt_sua.Name = "bt_sua";
-            this.bt_sua.Size = new System.Drawing.Size(59, 46);
-            this.bt_sua.TabIndex = 45;
-            this.bt_sua.UseVisualStyleBackColor = false;
             // 
             // bt_reset
             // 
@@ -237,7 +254,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(313, 140);
+            this.groupBox1.Size = new System.Drawing.Size(376, 146);
             this.groupBox1.TabIndex = 65;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hóa Đơn";
@@ -249,30 +266,31 @@
             this.bt_them2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_them2.FlatAppearance.BorderSize = 0;
             this.bt_them2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_them2.Location = new System.Drawing.Point(243, 11);
+            this.bt_them2.Location = new System.Drawing.Point(306, 6);
             this.bt_them2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_them2.Name = "bt_them2";
             this.bt_them2.Size = new System.Drawing.Size(59, 48);
             this.bt_them2.TabIndex = 55;
             this.bt_them2.UseVisualStyleBackColor = false;
+            this.bt_them2.Click += new System.EventHandler(this.bt_them2_Click);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(3, 66);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(54, 17);
+            this.label13.Size = new System.Drawing.Size(115, 17);
             this.label13.TabIndex = 50;
-            this.label13.Text = "Mã KH:";
+            this.label13.Text = "Tên khách hàng:";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(3, 21);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(54, 17);
+            this.label12.Size = new System.Drawing.Size(107, 17);
             this.label12.TabIndex = 49;
-            this.label12.Text = "Mã NV:";
+            this.label12.Text = "Tên nhân viên :";
             // 
             // dateTimePicker1
             // 
@@ -295,7 +313,7 @@
             // 
             this.cbo_manv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_manv.FormattingEnabled = true;
-            this.cbo_manv.Location = new System.Drawing.Point(63, 18);
+            this.cbo_manv.Location = new System.Drawing.Point(134, 18);
             this.cbo_manv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbo_manv.Name = "cbo_manv";
             this.cbo_manv.Size = new System.Drawing.Size(157, 24);
@@ -305,7 +323,7 @@
             // 
             this.cbo_makh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_makh.FormattingEnabled = true;
-            this.cbo_makh.Location = new System.Drawing.Point(63, 63);
+            this.cbo_makh.Location = new System.Drawing.Point(134, 63);
             this.cbo_makh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbo_makh.Name = "cbo_makh";
             this.cbo_makh.Size = new System.Drawing.Size(157, 24);
@@ -349,8 +367,9 @@
             this.dataGridView_CTHD.Location = new System.Drawing.Point(46, 187);
             this.dataGridView_CTHD.Name = "dataGridView_CTHD";
             this.dataGridView_CTHD.RowTemplate.Height = 24;
-            this.dataGridView_CTHD.Size = new System.Drawing.Size(404, 150);
+            this.dataGridView_CTHD.Size = new System.Drawing.Size(468, 150);
             this.dataGridView_CTHD.TabIndex = 67;
+            this.dataGridView_CTHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CTHD_CellClick);
             // 
             // dataGridView_SanPham
             // 
@@ -358,7 +377,7 @@
             this.dataGridView_SanPham.Location = new System.Drawing.Point(60, 434);
             this.dataGridView_SanPham.Name = "dataGridView_SanPham";
             this.dataGridView_SanPham.RowTemplate.Height = 24;
-            this.dataGridView_SanPham.Size = new System.Drawing.Size(724, 204);
+            this.dataGridView_SanPham.Size = new System.Drawing.Size(751, 204);
             this.dataGridView_SanPham.TabIndex = 68;
             this.dataGridView_SanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_SanPham_CellClick);
             // 
@@ -368,12 +387,13 @@
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(505, 200);
+            this.button2.Location = new System.Drawing.Point(577, 200);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(99, 86);
             this.button2.TabIndex = 72;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // bt_mua
             // 
@@ -381,7 +401,7 @@
             this.bt_mua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_mua.FlatAppearance.BorderSize = 0;
             this.bt_mua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_mua.Location = new System.Drawing.Point(657, 201);
+            this.bt_mua.Location = new System.Drawing.Point(733, 200);
             this.bt_mua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_mua.Name = "bt_mua";
             this.bt_mua.Size = new System.Drawing.Size(88, 85);
@@ -395,7 +415,7 @@
             this.txt_tongtien.Location = new System.Drawing.Point(601, 304);
             this.txt_tongtien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_tongtien.Name = "txt_tongtien";
-            this.txt_tongtien.Size = new System.Drawing.Size(143, 22);
+            this.txt_tongtien.Size = new System.Drawing.Size(231, 22);
             this.txt_tongtien.TabIndex = 70;
             // 
             // label8
@@ -415,26 +435,11 @@
             // 
             this.errorProvider2.ContainerControl = this;
             // 
-            // btn_xoa
-            // 
-            this.btn_xoa.BackColor = System.Drawing.Color.Transparent;
-            this.btn_xoa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_xoa.BackgroundImage")));
-            this.btn_xoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_xoa.FlatAppearance.BorderSize = 0;
-            this.btn_xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_xoa.Location = new System.Drawing.Point(347, 18);
-            this.btn_xoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_xoa.Name = "btn_xoa";
-            this.btn_xoa.Size = new System.Drawing.Size(57, 46);
-            this.btn_xoa.TabIndex = 56;
-            this.btn_xoa.UseVisualStyleBackColor = false;
-            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
-            // 
             // frmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(815, 650);
+            this.ClientSize = new System.Drawing.Size(861, 650);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.bt_mua);
             this.Controls.Add(this.txt_tongtien);
@@ -476,7 +481,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown number;
         private System.Windows.Forms.ComboBox cbo_mahd;
-        private System.Windows.Forms.Button bt_sua;
         private System.Windows.Forms.Button bt_reset;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button bt_them2;
@@ -498,5 +502,6 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
         private System.Windows.Forms.Button btn_xoa;
+        private System.Windows.Forms.Button btn_sua;
     }
 }

@@ -5,3 +5,10 @@ C:\Users\DUYMANH\Desktop\FILE hoc tap nam 3 ky 2\Phat trien phan mem\PETSHOP\DoA
 C:\Users\DUYMANH\Desktop\FILE hoc tap nam 3 ky 2\Phat trien phan mem\PETSHOP\DoAn_SHOPTHUCUNG\DAL\bin\Debug\DTO.dll
 C:\Users\DUYMANH\Desktop\FILE hoc tap nam 3 ky 2\Phat trien phan mem\PETSHOP\DoAn_SHOPTHUCUNG\DAL\bin\Debug\DTO.pdb
 C:\Users\DUYMANH\Desktop\FILE hoc tap nam 3 ky 2\Phat trien phan mem\PETSHOP\DoAn_SHOPTHUCUNG\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\DAL\bin\Debug\DAL.dll
+C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\DAL\bin\Debug\DAL.pdb
+C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\DAL\bin\Debug\DTO.dll
+C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\DAL\bin\Debug\DTO.pdb
+C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\DAL\obj\Debug\DAL.dll
+C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\DAL\obj\Debug\DAL.pdb
+C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache

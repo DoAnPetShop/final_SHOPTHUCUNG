@@ -60,7 +60,7 @@ namespace DTO
     #endregion
 		
 		public QL_SHOPTHUCUNGDataContext() : 
-				base(global::DTO.Properties.Settings.Default.QL_SHOPTHUCUNG1ConnectionString, mappingSource)
+				base(global::DTO.Properties.Settings.Default.QL_SHOPTHUCUNG1ConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -190,6 +190,14 @@ namespace DTO
 			get
 			{
 				return this.GetTable<View_DoanhThu>();
+			}
+		}
+		
+		public System.Data.Linq.Table<View_CTNHAPHANG> View_CTNHAPHANGs
+		{
+			get
+			{
+				return this.GetTable<View_CTNHAPHANG>();
 			}
 		}
 	}
@@ -2583,6 +2591,105 @@ namespace DTO
 				if ((this._DOANHTHU != value))
 				{
 					this._DOANHTHU = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.View_CTNHAPHANG")]
+	public partial class View_CTNHAPHANG
+	{
+		
+		private int _MANHAP;
+		
+		private int _MASP;
+		
+		private System.Nullable<decimal> _DONGIA;
+		
+		private System.Nullable<int> _SOLUONG;
+		
+		private System.Nullable<decimal> _TONGTIEN;
+		
+		public View_CTNHAPHANG()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MANHAP", DbType="Int NOT NULL")]
+		public int MANHAP
+		{
+			get
+			{
+				return this._MANHAP;
+			}
+			set
+			{
+				if ((this._MANHAP != value))
+				{
+					this._MANHAP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MASP", DbType="Int NOT NULL")]
+		public int MASP
+		{
+			get
+			{
+				return this._MASP;
+			}
+			set
+			{
+				if ((this._MASP != value))
+				{
+					this._MASP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DONGIA", DbType="Money")]
+		public System.Nullable<decimal> DONGIA
+		{
+			get
+			{
+				return this._DONGIA;
+			}
+			set
+			{
+				if ((this._DONGIA != value))
+				{
+					this._DONGIA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SOLUONG", DbType="Int")]
+		public System.Nullable<int> SOLUONG
+		{
+			get
+			{
+				return this._SOLUONG;
+			}
+			set
+			{
+				if ((this._SOLUONG != value))
+				{
+					this._SOLUONG = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TONGTIEN", DbType="Money")]
+		public System.Nullable<decimal> TONGTIEN
+		{
+			get
+			{
+				return this._TONGTIEN;
+			}
+			set
+			{
+				if ((this._TONGTIEN != value))
+				{
+					this._TONGTIEN = value;
 				}
 			}
 		}

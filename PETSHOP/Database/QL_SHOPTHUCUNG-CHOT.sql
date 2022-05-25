@@ -225,6 +225,8 @@ insert into NHAPHANG(MACC,TIENDAUTU,NGAYNHAP) values ('NCC002',43434343,getdate(
 select * from NHapHang
 select * from CTNHAPHANG
 select * from HOADON
-select * from CTHOADON
+select SOLUONG from CTHOADON where MAHD = 11 and MASP = 15
 select * from SANPHAM
 select SoLuong from SanPham where MASP = '2'
+
+                              

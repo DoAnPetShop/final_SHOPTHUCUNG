@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHoaDon));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btn_sua = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
             this.txt_masp = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@
             this.cbo_mahd = new System.Windows.Forms.ComboBox();
             this.bt_reset = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_xoahd = new System.Windows.Forms.Button();
             this.bt_them2 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -63,6 +63,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.bt_sua = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.number)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -75,7 +76,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
-            this.groupBox2.Controls.Add(this.btn_sua);
+            this.groupBox2.Controls.Add(this.bt_sua);
             this.groupBox2.Controls.Add(this.btn_xoa);
             this.groupBox2.Controls.Add(this.txt_masp);
             this.groupBox2.Controls.Add(this.label5);
@@ -96,21 +97,6 @@
             this.groupBox2.TabIndex = 66;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi Tiết Hóa Đơn";
-            // 
-            // btn_sua
-            // 
-            this.btn_sua.BackColor = System.Drawing.Color.Transparent;
-            this.btn_sua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_sua.BackgroundImage")));
-            this.btn_sua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_sua.FlatAppearance.BorderSize = 0;
-            this.btn_sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_sua.Location = new System.Drawing.Point(285, 70);
-            this.btn_sua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_sua.Name = "btn_sua";
-            this.btn_sua.Size = new System.Drawing.Size(57, 46);
-            this.btn_sua.TabIndex = 57;
-            this.btn_sua.UseVisualStyleBackColor = false;
-            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
             // btn_xoa
             // 
@@ -242,6 +228,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.btn_xoahd);
             this.groupBox1.Controls.Add(this.bt_them2);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label12);
@@ -258,6 +245,21 @@
             this.groupBox1.TabIndex = 65;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hóa Đơn";
+            // 
+            // btn_xoahd
+            // 
+            this.btn_xoahd.BackColor = System.Drawing.Color.Transparent;
+            this.btn_xoahd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_xoahd.BackgroundImage")));
+            this.btn_xoahd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_xoahd.FlatAppearance.BorderSize = 0;
+            this.btn_xoahd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_xoahd.Location = new System.Drawing.Point(308, 56);
+            this.btn_xoahd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_xoahd.Name = "btn_xoahd";
+            this.btn_xoahd.Size = new System.Drawing.Size(57, 46);
+            this.btn_xoahd.TabIndex = 57;
+            this.btn_xoahd.UseVisualStyleBackColor = false;
+            this.btn_xoahd.Click += new System.EventHandler(this.btn_xoahd_Click);
             // 
             // bt_them2
             // 
@@ -342,6 +344,7 @@
             this.bt_tim.TabIndex = 63;
             this.bt_tim.Tag = "";
             this.bt_tim.UseVisualStyleBackColor = true;
+            this.bt_tim.Click += new System.EventHandler(this.bt_tim_Click);
             // 
             // txt_timkiem
             // 
@@ -435,6 +438,21 @@
             // 
             this.errorProvider2.ContainerControl = this;
             // 
+            // bt_sua
+            // 
+            this.bt_sua.BackColor = System.Drawing.Color.Transparent;
+            this.bt_sua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_sua.BackgroundImage")));
+            this.bt_sua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bt_sua.FlatAppearance.BorderSize = 0;
+            this.bt_sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_sua.Location = new System.Drawing.Point(283, 70);
+            this.bt_sua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_sua.Name = "bt_sua";
+            this.bt_sua.Size = new System.Drawing.Size(59, 46);
+            this.bt_sua.TabIndex = 58;
+            this.bt_sua.UseVisualStyleBackColor = false;
+            this.bt_sua.Click += new System.EventHandler(this.bt_sua_Click);
+            // 
             // frmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -502,6 +520,7 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
         private System.Windows.Forms.Button btn_xoa;
-        private System.Windows.Forms.Button btn_sua;
+        private System.Windows.Forms.Button btn_xoahd;
+        private System.Windows.Forms.Button bt_sua;
     }
 }

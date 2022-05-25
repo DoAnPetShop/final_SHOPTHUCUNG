@@ -35,7 +35,7 @@ namespace GUI
             txt_makh.Text = dataGridView_khachhang.CurrentRow.Cells[0].Value.ToString();
             txt_tenkh.Text = dataGridView_khachhang.CurrentRow.Cells[1].Value.ToString();
             dateTimePicker1.Text = dataGridView_khachhang.CurrentRow.Cells[2].Value.ToString();
-            cbo_phanloai.SelectedItem = dataGridView_khachhang.CurrentRow.Cells[3].Value.ToString();
+            cbo_phanloai.Text = dataGridView_khachhang.CurrentRow.Cells[3].Value.ToString();
             txt_diachi.Text = dataGridView_khachhang.CurrentRow.Cells[4].Value.ToString();
             txt_dth.Text = dataGridView_khachhang.CurrentRow.Cells[5].Value.ToString();
         }

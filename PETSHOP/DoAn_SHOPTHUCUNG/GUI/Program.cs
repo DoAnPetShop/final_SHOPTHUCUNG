@@ -9,6 +9,7 @@ namespace GUI
     static class Program
     {
         public static frmMain mainForm = null;
+        public static frmMainNV mainnvForm = null;
         public static frmDangNhap loginForm = null;
         public static frmConnection connectForm = null;
         /// <summary>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.875, 13.5" name="QL_SHOPTHUCUNG">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 13.25, 13.5" name="QL_SHOPTHUCUNG">
   <DataContextMoniker Name="/QL_SHOPTHUCUNGDataContext" />
   <nestedChildShapes>
     <classShape Id="362b976b-5f04-4940-8b0a-bfb8bc69d833" absoluteBounds="6.25, 1.125, 2, 1.5785953776041664">
@@ -63,14 +63,14 @@
         <classShapeMoniker Id="362b976b-5f04-4940-8b0a-bfb8bc69d833" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 9.75526905989583); (6.26041666666667 : 9.75526905989583 : JumpStart); (6.42708333333333 : 9.75526905989583 : JumpEnd); (11.15625 : 9.75526905989583); (11.15625 : 8.45359537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(5.5 : 9.75526905989583); (11.15625 : 9.75526905989583); (11.15625 : 8.45359537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/QL_SHOPTHUCUNGDataContext/SANPHAM/SANPHAM_CTNHAPHANG" />
       <nodes>
         <classShapeMoniker Id="3ec31139-f3c1-4f77-a7a4-40757276edca" />
         <classShapeMoniker Id="fc088e84-4598-4fb8-913d-ed21ff05c093" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 1.91429768880208); (5.91666666666667 : 1.91429768880208 : JumpStart); (6.08333333333333 : 1.91429768880208 : JumpEnd); (6.25 : 1.91429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 1.91429768880208); (5.91666666666667 : 1.91429768880208 : JumpStart); (6.08333333333333 : 1.91429768880208 : JumpEnd); (6.25 : 1.91429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/QL_SHOPTHUCUNGDataContext/HOADON/HOADON_CTHOADON" />
       <nodes>
         <classShapeMoniker Id="b4570fdf-97e6-4aa7-a938-e0bc0ebb8031" />
@@ -91,7 +91,7 @@
         <classShapeMoniker Id="3ec31139-f3c1-4f77-a7a4-40757276edca" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 6.75405060677083); (6 : 6.75405060677083); (6 : 0.625); (4.5 : 0.625); (4.5 : 1)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 6.75405060677083); (6 : 6.75405060677083); (6 : 0.625); (4.5 : 0.625); (4.5 : 1)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/QL_SHOPTHUCUNGDataContext/NHANVIEN/NHANVIEN_HOADON" />
       <nodes>
         <classShapeMoniker Id="af52b8b6-9ff3-40c1-aa9d-7c9343f50ed1" />
@@ -105,7 +105,7 @@
         <classShapeMoniker Id="fc088e84-4598-4fb8-913d-ed21ff05c093" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.75 : 4.66429768880208); (5.91666666666667 : 4.66429768880208 : JumpStart); (6.08333333333333 : 4.66429768880208 : JumpEnd); (6.26041666666667 : 4.66429768880208 : JumpStart); (6.42708333333333 : 4.66429768880208 : JumpEnd); (6.5 : 4.66429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.75 : 4.66429768880208); (5.91666666666667 : 4.66429768880208 : JumpStart); (6.08333333333333 : 4.66429768880208 : JumpEnd); (6.5 : 4.66429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/QL_SHOPTHUCUNGDataContext/NHACUNGCAP/NHACUNGCAP_NHAPHANG" />
       <nodes>
         <classShapeMoniker Id="5ddbb08f-9583-4275-97a8-29758a7555e1" />
@@ -134,6 +134,12 @@
       <DataClassMoniker Name="/QL_SHOPTHUCUNGDataContext/View_DoanhThu" />
       <nestedChildShapes>
         <elementListCompartment Id="7880ea19-21cf-4e29-963f-6b5d77414448" absoluteBounds="3.14, 2.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="02be6c7c-c21b-4842-953f-4e6496d99e4f" absoluteBounds="11, 4.125, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/QL_SHOPTHUCUNGDataContext/View_CTNHAPHANG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3897e1bc-0274-4ac6-9066-039166eed00c" absoluteBounds="11.015, 4.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

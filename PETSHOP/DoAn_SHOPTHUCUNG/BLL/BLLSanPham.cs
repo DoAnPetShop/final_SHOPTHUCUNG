@@ -18,5 +18,9 @@ namespace BLL
         {
             return dalsanpham.loadSanPham();
         }
+        public List<View_SanPham> loadSanPhamTimKiem(string tensp)
+        {
+            return dalsanpham.loadSanPhamTheoTimKiem(tensp);
+        }
     }
 }

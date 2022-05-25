@@ -51,7 +51,7 @@ namespace GUI
             int kq = CauHinh.check_user(txtName.Text, txtPass.Text);
             if(kq == 5)
             {
-                MessageBox.Show("Sai " + label3.Text + " hoac " + label4.Text + "");
+                MessageBox.Show("Sai " + label3.Text + " hoac " + label4.Text + "","Thông báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Error);
                 return;
             }
             else if (kq == 10)
@@ -62,10 +62,20 @@ namespace GUI
            
             if (Program.mainForm == null || Program.mainForm.IsDisposed)
             {
-                Program.mainForm = new frmMain();
+                if(CauHinh.phanQuyen(txtName.Text) == "Quản lý")
+                {
+                    Program.mainForm = new frmMain();
+                    this.Visible = false;
+                    Program.mainForm.Show();
+                }
+               else
+                {
+                    Program.mainnvForm = new frmMainNV();
+                    this.Visible = false;
+                    Program.mainnvForm.Show();
+                }
             }
-            this.Visible = false;
-            Program.mainForm.Show();
+           
         }
 
              private void frmDangNhap_Load(object sender, EventArgs e)

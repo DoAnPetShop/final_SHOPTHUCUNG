@@ -15,4 +15,7 @@ C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\BLL
 C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\BLL\bin\Debug\DTO.pdb
 C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\BLL\obj\Debug\BLL.dll
 C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\BLL\obj\Debug\BLL.pdb
-C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\BLL\bin\Debug\DTO.dll.config
+C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\BLL\obj\Debug\BLL.csproj.CopyComplete

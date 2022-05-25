@@ -74,10 +74,33 @@ namespace GUI
         }
         public void hientongtien()
         {
+            string khach = "";
+            var KhachHangs = from kh in qlthucung.KHACHHANGs join
+             hd in qlthucung.HOADONs
+             on kh.MAKH equals hd.MAKH where hd.MAHD.Equals(cbo_mahd.SelectedValue)
+                             select new
+                            {
+                               kh.PHANLOAI
+                            };
+            foreach (var customer in KhachHangs)
+            {
+                khach = customer.PHANLOAI;
+            }
             double tongtien = 0;
             int sc = dataGridView_CTHD.Rows.Count;
             for (int i = 0; i < sc; i++)
+            {
+              
                 tongtien += double.Parse(dataGridView_CTHD.Rows[i].Cells[4].Value.ToString());
+            }
+            if (khach.ToString() == "VIP")
+            {
+                tongtien = tongtien - (tongtien * 0.1);
+            }
+            else
+            {
+                tongtien = tongtien + 0 ;
+            }
             txt_tongtien.Text = tongtien.ToString();
         }
 
@@ -121,6 +144,7 @@ namespace GUI
 
 
         }
+        
         public void bt_them_Click(object sender, EventArgs e)
         {
             errorProvider1.Clear();
@@ -150,13 +174,25 @@ namespace GUI
                 {
 
                     CTHOADON hoadons = qlthucung.CTHOADONs.Where(t => t.MAHD == int.Parse(cbo_mahd.SelectedValue.ToString())).FirstOrDefault();
-                    CTHOADON sanphams = qlthucung.CTHOADONs.Where(t => t.MASP == int.Parse(txt_masp.Text)).FirstOrDefault();
-                   
-                    if(sanphams != null)
+                  
+                       int sanphams = -1;
+                    var sps = from sp in qlthucung.SANPHAMs join
+                    cthd in qlthucung.CTHOADONs
+                     on sp.MaSP equals cthd.MASP where cthd.MAHD.Equals(cbo_mahd.SelectedValue)
+                              select new
+                              {
+                                  sp.MaSP
+                            };
+                    foreach (var product in sps)
                     {
-                        if (hoadons.MAHD.Equals(int.Parse(cbo_mahd.SelectedValue.ToString())) && sanphams.MASP.Equals(int.Parse(txt_masp.Text)))
+                        sanphams = product.MaSP;
+                    }
+                    if(sanphams != -1)
+                    {
+                        if (hoadons.MAHD.Equals(int.Parse(cbo_mahd.SelectedValue.ToString())))
                         {
-                            CTHOADON ct = qlthucung.CTHOADONs.Where(t => t.MAHD == hoadons.MAHD && t.MASP == sanphams.MASP).FirstOrDefault();
+                          
+                            CTHOADON ct = qlthucung.CTHOADONs.Where(t => t.MAHD == int.Parse(cbo_mahd.SelectedValue.ToString()) && t.MASP == sanphams).FirstOrDefault();
                             ct.SOLUONG += int.Parse(number.Value.ToString());
                             ct.DONGIA = decimal.Parse(txt_dongia.Text);
                             if (nguoidung.GetSoLuongSanPham(txt_masp.Text) < ct.SOLUONG)
@@ -167,6 +203,7 @@ namespace GUI
                             qlthucung.SubmitChanges();
                             loadDataG();
                         }
+                    
                     }
                    
                     else
@@ -207,10 +244,10 @@ namespace GUI
         private void dataGridView_CTHD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            txt_sp.Text = dataGridView_SanPham.CurrentRow.Cells[1].Value.ToString();
-            number.Value = int.Parse(dataGridView_SanPham.CurrentRow.Cells[2].Value.ToString());
-            txt_masp.Text = dataGridView_SanPham.CurrentRow.Cells[0].Value.ToString();
-            txt_dongia.Text = dataGridView_SanPham.CurrentRow.Cells[3].Value.ToString();
+           
+            number.Value = int.Parse(dataGridView_CTHD.CurrentRow.Cells[2].Value.ToString());
+            txt_masp.Text = dataGridView_CTHD.CurrentRow.Cells[1].Value.ToString();
+            txt_dongia.Text = dataGridView_CTHD.CurrentRow.Cells[3].Value.ToString();
         }
 
         private void btn_sua_Click(object sender, EventArgs e)
@@ -254,7 +291,69 @@ namespace GUI
                 qlthucung.HOADONs.InsertOnSubmit(hd);
                 qlthucung.SubmitChanges();
                 loadDataG();
+                loadcombo();
                 MessageBox.Show("Thêm hóa đơn thành công !!");
+            }
+        }
+
+        private void btn_xoahd_Click(object sender, EventArgs e)
+        {
+            int cthd;
+            var cts = from kh in qlthucung.CTHOADONs
+                             join
+                            hd in qlthucung.HOADONs
+                            on kh.MAHD equals hd.MAHD
+                             where hd.MAHD.Equals(cbo_mahd.SelectedValue)
+                             select new
+                             {
+                                 kh.MAHD
+                             };
+           
+            DialogResult h = MessageBox.Show
+               ("Bạn có chắc muốn xóa chi tiết hóa đơn này không?", "Thông báo", MessageBoxButtons.OKCancel);
+            if (h == DialogResult.OK)
+            {
+                if(cts != null)
+                {
+                    foreach (var customer in cts)
+                    {
+                        cthd = customer.MAHD;
+                        CTHOADON ct = qlthucung.CTHOADONs.Where(t => t.MAHD == cthd).FirstOrDefault();
+                        qlthucung.CTHOADONs.DeleteOnSubmit(ct);
+                        qlthucung.SubmitChanges();
+                        loadDataG();
+                    }
+                }
+                int hd = int.Parse(cbo_mahd.SelectedValue.ToString());
+                HOADON hoadon = qlthucung.HOADONs.Where(t => t.MAHD == hd).FirstOrDefault();
+                qlthucung.HOADONs.DeleteOnSubmit(hoadon);
+                qlthucung.SubmitChanges();
+                loadcombo();
+            }
+        }
+
+        private void bt_tim_Click(object sender, EventArgs e)
+        {
+            dataGridView_SanPham.DataSource = bllsanpham.loadSanPhamTimKiem(txt_timkiem.Text);
+        }
+
+        private void bt_sua_Click(object sender, EventArgs e)
+        {
+            DialogResult h = MessageBox.Show
+               ("Bạn có chắc muốn sửa chi tiết hóa đơn này không?", "Thông báo", MessageBoxButtons.OKCancel);
+            if (h == DialogResult.OK)
+            {
+                int cthd = int.Parse(dataGridView_CTHD.CurrentRow.Cells[0].Value.ToString());
+                CTHOADON ct = qlthucung.CTHOADONs.Where(t => t.MAHD == cthd).FirstOrDefault();
+                ct.SOLUONG = int.Parse(number.Value.ToString());
+                ct.DONGIA = decimal.Parse(txt_dongia.Text);
+                if (nguoidung.GetSoLuongSanPham(txt_masp.Text) < number.Value)
+                {
+                    MessageBox.Show("Không đủ số lượng!!!");
+                    return;
+                }
+                qlthucung.SubmitChanges();
+                loadDataG();
             }
         }
     }

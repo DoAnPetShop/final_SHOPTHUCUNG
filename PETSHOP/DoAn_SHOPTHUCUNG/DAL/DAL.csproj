@@ -43,9 +43,12 @@
     <Compile Include="DALCBHoaDon.cs" />
     <Compile Include="DALCBKhachHang.cs" />
     <Compile Include="DALCBNhanVien.cs" />
+    <Compile Include="DALCTNHAPHANG.cs" />
     <Compile Include="DALDemSoLuongSP.cs" />
     <Compile Include="DALDoanhThu.cs" />
     <Compile Include="DALHoaDon.cs" />
+    <Compile Include="DALNhaCungCap.cs" />
+    <Compile Include="DALNhapHang.cs" />
     <Compile Include="DALSanPham.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

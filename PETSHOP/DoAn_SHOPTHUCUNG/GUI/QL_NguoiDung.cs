@@ -78,6 +78,20 @@ namespace GUI
 
 
         }
+        public string phanQuyen(string taikhoan)
+        {
+            SqlConnection _Sqlconn = new
+            SqlConnection(Properties.Settings.Default.QL_SHOPTHUCUNG);
+            string sql = "select ChucVu from NhanVien where taikhoan = '" + taikhoan + "' ";
+            if (_Sqlconn.State == ConnectionState.Closed)
+                _Sqlconn.Open();
+            sqlcm = new SqlCommand(sql, _Sqlconn);
+            string n = (string)sqlcm.ExecuteScalar();
+            _Sqlconn.Close();
+            return n;
+
+
+        }
         public int upDateSoLuongSanPham(int pMahd)
         {
             try

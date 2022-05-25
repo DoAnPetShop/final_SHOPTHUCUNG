@@ -70,11 +70,11 @@
             // txt_tongtien
             // 
             this.txt_tongtien.Enabled = false;
-            this.txt_tongtien.Location = new System.Drawing.Point(538, 480);
+            this.txt_tongtien.Location = new System.Drawing.Point(538, 489);
             this.txt_tongtien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_tongtien.Multiline = true;
             this.txt_tongtien.Name = "txt_tongtien";
-            this.txt_tongtien.Size = new System.Drawing.Size(246, 37);
+            this.txt_tongtien.Size = new System.Drawing.Size(246, 28);
             this.txt_tongtien.TabIndex = 34;
             // 
             // label10

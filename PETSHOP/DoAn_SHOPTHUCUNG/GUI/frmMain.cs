@@ -69,5 +69,24 @@ namespace GUI
             frmbaocaongay.MdiParent = this;
             frmbaocaongay.Show();
         }
+
+        private void báoCáoThốngKêToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nhậpHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNhapHang frmNhap = new frmNhapHang();
+            frmNhap.MdiParent = this;
+            frmNhap.Show();
+        }
+
+        private void nhàCungCấpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNhaCungCap frmNhacc = new frmNhaCungCap();
+            frmNhacc.MdiParent = this;
+            frmNhacc.Show();
+        }
     }
 }

@@ -42,9 +42,12 @@
     <Compile Include="BLLCBHoaDon.cs" />
     <Compile Include="BLLCBKhachHang.cs" />
     <Compile Include="BLLCBNhanVien.cs" />
+    <Compile Include="BLLCTNHAPHANG.cs" />
     <Compile Include="BLLDemSoLuongSP.cs" />
     <Compile Include="BLLDoanhThu.cs" />
     <Compile Include="BLLHoaDon.cs" />
+    <Compile Include="BLLNhaCungCap.cs" />
+    <Compile Include="BLLNhapHang.cs" />
     <Compile Include="BLLSanPham.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

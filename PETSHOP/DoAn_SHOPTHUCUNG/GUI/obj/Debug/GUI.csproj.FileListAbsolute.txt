@@ -35,6 +35,12 @@ C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\GUI
 C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\GUI\obj\Debug\GUI.pdb
 C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\GUI\obj\Debug\GUI.frmKhachHang.resources
 C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\GUI\obj\Debug\GUI.frmNhanVien.resources
-C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
 C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\GUI\obj\Debug\GUI.frmBaoCaoNgay.resources
 C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\GUI\obj\Debug\GUI.frmBaoCaoThang.resources
+C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\GUI\bin\Debug\DTO.dll.config
+C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\GUI\obj\Debug\GUI.frmMainNV.resources
+C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\GUI\obj\Debug\GUI.frmNhaCungCap.resources
+C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\GUI\obj\Debug\GUI.frmNhapHang.resources

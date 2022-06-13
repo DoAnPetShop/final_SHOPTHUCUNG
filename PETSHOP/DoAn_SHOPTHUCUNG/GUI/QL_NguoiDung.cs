@@ -12,6 +12,7 @@ namespace GUI
     public class QL_NguoiDung
     {
         SqlCommand sqlcm;
+        SqlDataAdapter da;
         public int check_config()
         {
             if (Properties.Settings.Default.QL_SHOPTHUCUNG == string.Empty)
@@ -112,6 +113,37 @@ namespace GUI
             
 
 
+        }
+        public int upDateNhapHang(int pMaNhap)
+        {
+            try
+            {
+                SqlConnection _Sqlconn = new
+                SqlConnection(Properties.Settings.Default.QL_SHOPTHUCUNG);
+                string sql = "Update SanPham set soluong = (select (SANPHAM.SOLUONG + CTNHAPHANG.SOLUONG) from NHAPHANG,CTNHAPHANG where NHAPHANG.MANHAP = CTNHAPHANG.MANHAP and SANPHAM.MASP = CTNHAPHANG.MASP and CTNHAPHANG.MANHAP = '" + pMaNhap + "') where exists(select * from CTNHAPHANG where SANPHAM.MASP = CTNHAPHANG.MASP and CTNHAPHANG.MANHAP = '" + pMaNhap + "')";
+                if (_Sqlconn.State == ConnectionState.Closed)
+                    _Sqlconn.Open();
+                sqlcm = new SqlCommand(sql, _Sqlconn);
+                int n = sqlcm.ExecuteNonQuery();
+                _Sqlconn.Close();
+                return n;
+
+            }
+            catch (SqlException e)
+            {
+                return -1;
+            }
+        }
+        public DataTable DocDuLieu(String sql)
+        {
+            SqlConnection _Sqlconn = new
+            SqlConnection(Properties.Settings.Default.QL_SHOPTHUCUNG);
+            if (_Sqlconn.State == ConnectionState.Closed)
+                _Sqlconn.Open();
+            DataTable dt = new DataTable();
+            da = new SqlDataAdapter(sql, _Sqlconn);
+            da.Fill(dt);
+            return dt;
         }
     }
 }

@@ -138,9 +138,9 @@ set dateformat dmy
 insert into NHAPHANG(MACC, NGAYNHAP) values('NCC001', getdate()),
 ('NCC001', getdate())
 insert into CTNHAPHANG (MANHAP, MASP,SOLUONG, DONGIA)
- values(1, 3, 10,1000000),
-(2, 14, 2,100000),
-(2, 5, 3,100000)
+ values(1, 6, 10,1000000),
+(2, 7, 2,100000),
+(2, 11, 3,100000)
 
 
 --====================================HÓA ĐƠN
@@ -151,7 +151,7 @@ insert into HOADON (MAKH, NGAYHD, MANV) values('KH003', getdate(), 'NV001'),
 ('KH002', '15-11-2021', 'NV001'),
 ('KH003', '15-12-2021', 'NV001'),
 ('KH002', '15-12-2021', 'NV001')
-insert into CTHOADON (MAHD, MASP,SOLUONG, DONGIA) values(2, 6, 3,5999000),
+insert into CTHOADON (MAHD, MASP,SOLUONG, DONGIA) values(4, 7, 3,5999000),
 (2, 7, 2,6999000),
 (3, 6, 3,2000000),
 (3, 7, 2,4000000),
@@ -225,8 +225,18 @@ insert into NHAPHANG(MACC,TIENDAUTU,NGAYNHAP) values ('NCC002',43434343,getdate(
 select * from NHapHang
 select * from CTNHAPHANG
 select * from HOADON
+select * from CTHOADON
 select SOLUONG from CTHOADON where MAHD = 11 and MASP = 15
 select * from SANPHAM
 select SoLuong from SanPham where MASP = '2'
 
-                              
+SELECT dbo.SANPHAM.MaSP, dbo.SANPHAM.TenSP, dbo.HOADON.NGAYHD, dbo.CTNHAPHANG.DONGIA AS DONGIANHAP, dbo.CTHOADON.DONGIA AS DONGIABAN, sum(dbo.CTHOADON.SOLUONG) as SOLUONG,
+SUM(dbo.CTHOADON.SOLUONG * dbo.CTHOADON.DONGIA - dbo.CTHOADON.SOLUONG * dbo.CTNHAPHANG.DONGIA) AS DOANHTHU
+FROM     dbo.CTHOADON INNER JOIN
+                  dbo.CTNHAPHANG ON dbo.CTHOADON.MASP = dbo.CTNHAPHANG.MASP INNER JOIN
+                  dbo.HOADON ON dbo.CTHOADON.MAHD = dbo.HOADON.MAHD INNER JOIN
+                  dbo.NHAPHANG ON dbo.CTNHAPHANG.MANHAP = dbo.NHAPHANG.MANHAP INNER JOIN
+                  dbo.SANPHAM ON dbo.CTHOADON.MASP = dbo.SANPHAM.MaSP AND dbo.CTNHAPHANG.MASP = dbo.SANPHAM.MaSP   where NGAYHD = '2021-11-15' GROUP BY dbo.SANPHAM.MaSP, dbo.SANPHAM.TenSP, dbo.HOADON.NGAYHD, dbo.CTNHAPHANG.DONGIA, dbo.CTHOADON.DONGIA
+
+
+				 

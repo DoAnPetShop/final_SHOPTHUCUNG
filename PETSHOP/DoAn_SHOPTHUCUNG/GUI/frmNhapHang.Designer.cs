@@ -52,14 +52,19 @@
             this.bt_them = new System.Windows.Forms.Button();
             this.bt_reset = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnChon = new System.Windows.Forms.Button();
+            this.rdoXemTT = new System.Windows.Forms.RadioButton();
+            this.rdoTim = new System.Windows.Forms.RadioButton();
             this.bt_mua = new System.Windows.Forms.Button();
-            this.bt_in = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.number)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_ctnhaphang)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -221,7 +226,7 @@
             this.dt_ctnhaphang.Location = new System.Drawing.Point(10, 188);
             this.dt_ctnhaphang.Name = "dt_ctnhaphang";
             this.dt_ctnhaphang.RowTemplate.Height = 24;
-            this.dt_ctnhaphang.Size = new System.Drawing.Size(562, 235);
+            this.dt_ctnhaphang.Size = new System.Drawing.Size(474, 235);
             this.dt_ctnhaphang.TabIndex = 64;
             this.dt_ctnhaphang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dt_ctnhaphang_CellClick);
             // 
@@ -263,6 +268,7 @@
             this.bt_luu2.Size = new System.Drawing.Size(59, 46);
             this.bt_luu2.TabIndex = 63;
             this.bt_luu2.UseVisualStyleBackColor = false;
+            this.bt_luu2.Click += new System.EventHandler(this.bt_luu2_Click);
             // 
             // bt_xoa2
             // 
@@ -276,6 +282,7 @@
             this.bt_xoa2.Size = new System.Drawing.Size(64, 50);
             this.bt_xoa2.TabIndex = 56;
             this.bt_xoa2.UseVisualStyleBackColor = true;
+            this.bt_xoa2.Click += new System.EventHandler(this.bt_xoa2_Click);
             // 
             // bt_them
             // 
@@ -309,10 +316,11 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Controls.Add(this.bt_mua);
             this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.dt_ctnhaphang);
-            this.groupBox2.Controls.Add(this.bt_in);
             this.groupBox2.Controls.Add(this.groupBox1);
             this.groupBox2.Location = new System.Drawing.Point(2, 1);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
@@ -323,34 +331,85 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btnChon);
+            this.groupBox3.Controls.Add(this.rdoXemTT);
+            this.groupBox3.Controls.Add(this.rdoTim);
+            this.groupBox3.Location = new System.Drawing.Point(643, 188);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Size = new System.Drawing.Size(235, 235);
+            this.groupBox3.TabIndex = 74;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Sắp Xếp, Xem Thông Tin";
+            // 
+            // btnChon
+            // 
+            this.btnChon.Location = new System.Drawing.Point(72, 137);
+            this.btnChon.Margin = new System.Windows.Forms.Padding(2);
+            this.btnChon.Name = "btnChon";
+            this.btnChon.Size = new System.Drawing.Size(85, 31);
+            this.btnChon.TabIndex = 2;
+            this.btnChon.Text = "Chọn";
+            this.btnChon.UseVisualStyleBackColor = true;
+            this.btnChon.Click += new System.EventHandler(this.btnChon_Click);
+            // 
+            // rdoXemTT
+            // 
+            this.rdoXemTT.AutoSize = true;
+            this.rdoXemTT.Location = new System.Drawing.Point(55, 97);
+            this.rdoXemTT.Margin = new System.Windows.Forms.Padding(2);
+            this.rdoXemTT.Name = "rdoXemTT";
+            this.rdoXemTT.Size = new System.Drawing.Size(126, 21);
+            this.rdoXemTT.TabIndex = 1;
+            this.rdoXemTT.TabStop = true;
+            this.rdoXemTT.Text = "Xem Thông Tin";
+            this.rdoXemTT.UseVisualStyleBackColor = true;
+            // 
+            // rdoTim
+            // 
+            this.rdoTim.AutoSize = true;
+            this.rdoTim.Location = new System.Drawing.Point(55, 57);
+            this.rdoTim.Margin = new System.Windows.Forms.Padding(2);
+            this.rdoTim.Name = "rdoTim";
+            this.rdoTim.Size = new System.Drawing.Size(80, 21);
+            this.rdoTim.TabIndex = 0;
+            this.rdoTim.TabStop = true;
+            this.rdoTim.Text = "Sắp xếp";
+            this.rdoTim.UseVisualStyleBackColor = true;
+            // 
             // bt_mua
             // 
             this.bt_mua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_mua.BackgroundImage")));
             this.bt_mua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_mua.FlatAppearance.BorderSize = 0;
             this.bt_mua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_mua.Location = new System.Drawing.Point(625, 200);
+            this.bt_mua.Location = new System.Drawing.Point(511, 188);
             this.bt_mua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_mua.Name = "bt_mua";
-            this.bt_mua.Size = new System.Drawing.Size(87, 78);
+            this.bt_mua.Size = new System.Drawing.Size(118, 105);
             this.bt_mua.TabIndex = 72;
             this.bt_mua.UseVisualStyleBackColor = true;
-            // 
-            // bt_in
-            // 
-            this.bt_in.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_in.BackgroundImage")));
-            this.bt_in.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bt_in.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_in.Location = new System.Drawing.Point(625, 320);
-            this.bt_in.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bt_in.Name = "bt_in";
-            this.bt_in.Size = new System.Drawing.Size(118, 74);
-            this.bt_in.TabIndex = 58;
-            this.bt_in.UseVisualStyleBackColor = true;
+            this.bt_mua.Click += new System.EventHandler(this.bt_mua_Click);
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(511, 312);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(127, 111);
+            this.button2.TabIndex = 73;
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // frmNhapHang
             // 
@@ -368,6 +427,8 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
@@ -378,7 +439,6 @@
         private System.Windows.Forms.ComboBox cboNCC;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button bt_in;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnThemSua;
         private System.Windows.Forms.Button bt_luu2;
@@ -399,5 +459,10 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button bt_mua;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btnChon;
+        private System.Windows.Forms.RadioButton rdoXemTT;
+        private System.Windows.Forms.RadioButton rdoTim;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -21,8 +21,38 @@ namespace GUI
         private void frmMain_Load(object sender, EventArgs e)
         {
             IsMdiContainer = true;
+            //FindMenuPhanQuyen(this.menuStrip1.Items);
         }
+        //private void FindMenuPhanQuyen(ToolStripItemCollection mnuItems)
+        //{
+        //    foreach (ToolStripItem menu in mnuItems)
+        //    {
+        //        if (menu is ToolStripMenuItem &&
+        //       ((ToolStripMenuItem)(menu)).DropDownItems.Count > 0)
+        //        {
 
+        //            FindMenuPhanQuyen(((ToolStripMenuItem)(menu)).DropDownItems);
+        //            menu.Enabled = CheckAllMenuChildVisible(((ToolStripMenuItem)(menu)).DropDownItems);
+        //            menu.Visible = menu.Enabled;
+        //        }
+               
+        //    }
+        //}
+        //private bool CheckAllMenuChildVisible(ToolStripItemCollection mnuItems)
+        //{
+        //    foreach (ToolStripItem menuItem in mnuItems)
+        //    {
+        //        if (menuItem is ToolStripMenuItem && menuItem.Enabled)
+        //        {
+        //            return true;
+        //        }
+        //        else if (menuItem is ToolStripSeparator)
+        //        {
+        //            continue;
+        //        }
+        //    }
+        //    return false;
+        //}
         private void kếtNốiHệThốngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmConnection frmConnec = new frmConnection();
@@ -85,6 +115,18 @@ namespace GUI
         private void nhàCungCấpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmNhaCungCap frmNhacc = new frmNhaCungCap();
+            frmNhacc.MdiParent = this;
+            frmNhacc.Show();
+        }
+
+        private void trangChủToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSanPham frmNhacc = new frmSanPham();
             frmNhacc.MdiParent = this;
             frmNhacc.Show();
         }

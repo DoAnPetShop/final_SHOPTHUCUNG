@@ -41,6 +41,7 @@ namespace GUI
             if (count > 0)
             {
                 dataGridView_doanhthu.DataSource = blldoanhthu.loadDoanThuTheoThang(dateTimePicker1.Value);
+                hientongtien();
             }
             else
             {
@@ -54,12 +55,26 @@ namespace GUI
             double tongtien = 0;
             int sc = dataGridView_doanhthu.Rows.Count;
             for (int i = 0; i < sc; i++)
-                tongtien += double.Parse(dataGridView_doanhthu.Rows[i].Cells[5].Value.ToString());
+                tongtien += double.Parse(dataGridView_doanhthu.Rows[i].Cells[6].Value.ToString());
             txt_tongtien.Text = tongtien.ToString();
         }
         private void frmBaoCaoThang_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void bt_thoat_Click(object sender, EventArgs e)
+        {
+            DialogResult h = MessageBox.Show("May co muon thoat khong", "thong bao", MessageBoxButtons.OKCancel);
+            if (h == DialogResult.OK)
+                Application.Exit();
+        }
+
+        private void bt_thoat_Click_1(object sender, EventArgs e)
+        {
+            DialogResult h = MessageBox.Show("May co muon thoat khong", "thong bao", MessageBoxButtons.OKCancel);
+            if (h == DialogResult.OK)
+                Application.Exit();
         }
     }
 }

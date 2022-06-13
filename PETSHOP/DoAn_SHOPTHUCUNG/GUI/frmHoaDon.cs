@@ -107,9 +107,9 @@ namespace GUI
         private void dataGridView_SanPham_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txt_sp.Text = dataGridView_SanPham.CurrentRow.Cells[1].Value.ToString();
-
+            pictureBox5.ImageLocation = dataGridView_SanPham.CurrentRow.Cells[2].Value.ToString();
             txt_masp.Text = dataGridView_SanPham.CurrentRow.Cells[0].Value.ToString();
-            txt_dongia.Text = dataGridView_SanPham.CurrentRow.Cells[3].Value.ToString();
+            txt_dongia.Text = dataGridView_SanPham.CurrentRow.Cells[4].Value.ToString();
         }
 
         private void bt_mua_Click(object sender, EventArgs e)
@@ -243,6 +243,8 @@ namespace GUI
 
         private void dataGridView_CTHD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            btn_xoa.Enabled = true;
+            bt_sua.Enabled = true;
 
            
             number.Value = int.Parse(dataGridView_CTHD.CurrentRow.Cells[2].Value.ToString());
@@ -272,7 +274,16 @@ namespace GUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            if (cbo_mahd.SelectedItem == null)
+            {
+                MessageBox.Show("Vui lòng chọn hóa đơn để in!!!");
+            }
+            else
+            {
+                TruyenDuLieu.MAHD = int.Parse(cbo_mahd.SelectedValue.ToString());
+                frmInHoaDon frm = new frmInHoaDon();
+                frm.ShowDialog();
+            }
         }
 
         private void bt_them2_Click(object sender, EventArgs e)
@@ -355,6 +366,14 @@ namespace GUI
                 qlthucung.SubmitChanges();
                 loadDataG();
             }
+        }
+
+        private void bt_reset_Click(object sender, EventArgs e)
+        {
+
+            btn_xoa.Enabled = false;
+            bt_sua.Enabled = false;
+
         }
     }
 }

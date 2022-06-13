@@ -21,6 +21,7 @@ namespace DAL
 
                 MaSP = l.MaSP,
                 TenSP = l.TenSP,
+                HinhAnh = l.HinhAnh,
                 Soluong = l.Soluong,
                 Gia = l.Gia,
                 TinhTrang = l.TinhTrang,

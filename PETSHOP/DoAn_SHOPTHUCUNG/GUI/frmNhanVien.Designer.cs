@@ -30,11 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhanVien));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView_nhanvien = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.bt_xoa = new System.Windows.Forms.Button();
-            this.bt_them = new System.Windows.Forms.Button();
-            this.bt_sua = new System.Windows.Forms.Button();
-            this.bt_reset = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.cbo_cv = new System.Windows.Forms.ComboBox();
             this.txt_dth = new System.Windows.Forms.TextBox();
             this.txt_tk = new System.Windows.Forms.TextBox();
@@ -52,11 +50,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView_nhanvien = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.bt_xoa = new System.Windows.Forms.Button();
+            this.bt_them = new System.Windows.Forms.Button();
+            this.bt_sua = new System.Windows.Forms.Button();
+            this.bt_reset = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_nhanvien)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -70,6 +70,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(844, 655);
             this.panel1.TabIndex = 59;
+            // 
+            // dataGridView_nhanvien
+            // 
+            this.dataGridView_nhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_nhanvien.Location = new System.Drawing.Point(57, 280);
+            this.dataGridView_nhanvien.Name = "dataGridView_nhanvien";
+            this.dataGridView_nhanvien.RowTemplate.Height = 24;
+            this.dataGridView_nhanvien.Size = new System.Drawing.Size(721, 361);
+            this.dataGridView_nhanvien.TabIndex = 1;
             // 
             // panel3
             // 
@@ -102,63 +111,12 @@
             this.panel3.Size = new System.Drawing.Size(721, 228);
             this.panel3.TabIndex = 0;
             // 
-            // bt_xoa
+            // dateTimePicker1
             // 
-            this.bt_xoa.BackColor = System.Drawing.Color.Transparent;
-            this.bt_xoa.BackgroundImage = global::GUI.Properties.Resources.delete;
-            this.bt_xoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bt_xoa.Enabled = false;
-            this.bt_xoa.FlatAppearance.BorderSize = 0;
-            this.bt_xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_xoa.Location = new System.Drawing.Point(651, 14);
-            this.bt_xoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bt_xoa.Name = "bt_xoa";
-            this.bt_xoa.Size = new System.Drawing.Size(57, 47);
-            this.bt_xoa.TabIndex = 55;
-            this.bt_xoa.UseVisualStyleBackColor = false;
-            // 
-            // bt_them
-            // 
-            this.bt_them.BackColor = System.Drawing.Color.Transparent;
-            this.bt_them.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_them.BackgroundImage")));
-            this.bt_them.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bt_them.FlatAppearance.BorderSize = 0;
-            this.bt_them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_them.Location = new System.Drawing.Point(585, 14);
-            this.bt_them.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bt_them.Name = "bt_them";
-            this.bt_them.Size = new System.Drawing.Size(59, 48);
-            this.bt_them.TabIndex = 56;
-            this.bt_them.UseVisualStyleBackColor = false;
-            // 
-            // bt_sua
-            // 
-            this.bt_sua.BackColor = System.Drawing.Color.Transparent;
-            this.bt_sua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_sua.BackgroundImage")));
-            this.bt_sua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bt_sua.Enabled = false;
-            this.bt_sua.FlatAppearance.BorderSize = 0;
-            this.bt_sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_sua.Location = new System.Drawing.Point(585, 68);
-            this.bt_sua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bt_sua.Name = "bt_sua";
-            this.bt_sua.Size = new System.Drawing.Size(59, 46);
-            this.bt_sua.TabIndex = 54;
-            this.bt_sua.UseVisualStyleBackColor = false;
-            // 
-            // bt_reset
-            // 
-            this.bt_reset.BackColor = System.Drawing.Color.Transparent;
-            this.bt_reset.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_reset.BackgroundImage")));
-            this.bt_reset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bt_reset.FlatAppearance.BorderSize = 0;
-            this.bt_reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_reset.Location = new System.Drawing.Point(651, 66);
-            this.bt_reset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bt_reset.Name = "bt_reset";
-            this.bt_reset.Size = new System.Drawing.Size(57, 46);
-            this.bt_reset.TabIndex = 53;
-            this.bt_reset.UseVisualStyleBackColor = false;
+            this.dateTimePicker1.Location = new System.Drawing.Point(125, 177);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(247, 22);
+            this.dateTimePicker1.TabIndex = 57;
             // 
             // cbo_cv
             // 
@@ -308,21 +266,64 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Mã Nhân Viên:";
             // 
-            // dataGridView_nhanvien
+            // bt_xoa
             // 
-            this.dataGridView_nhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_nhanvien.Location = new System.Drawing.Point(57, 280);
-            this.dataGridView_nhanvien.Name = "dataGridView_nhanvien";
-            this.dataGridView_nhanvien.RowTemplate.Height = 24;
-            this.dataGridView_nhanvien.Size = new System.Drawing.Size(721, 361);
-            this.dataGridView_nhanvien.TabIndex = 1;
+            this.bt_xoa.BackColor = System.Drawing.Color.Transparent;
+            this.bt_xoa.BackgroundImage = global::GUI.Properties.Resources.delete;
+            this.bt_xoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bt_xoa.Enabled = false;
+            this.bt_xoa.FlatAppearance.BorderSize = 0;
+            this.bt_xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_xoa.Location = new System.Drawing.Point(651, 14);
+            this.bt_xoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_xoa.Name = "bt_xoa";
+            this.bt_xoa.Size = new System.Drawing.Size(57, 47);
+            this.bt_xoa.TabIndex = 55;
+            this.bt_xoa.UseVisualStyleBackColor = false;
+            this.bt_xoa.Click += new System.EventHandler(this.bt_xoa_Click);
             // 
-            // dateTimePicker1
+            // bt_them
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(125, 177);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(247, 22);
-            this.dateTimePicker1.TabIndex = 57;
+            this.bt_them.BackColor = System.Drawing.Color.Transparent;
+            this.bt_them.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_them.BackgroundImage")));
+            this.bt_them.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bt_them.FlatAppearance.BorderSize = 0;
+            this.bt_them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_them.Location = new System.Drawing.Point(585, 14);
+            this.bt_them.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_them.Name = "bt_them";
+            this.bt_them.Size = new System.Drawing.Size(59, 48);
+            this.bt_them.TabIndex = 56;
+            this.bt_them.UseVisualStyleBackColor = false;
+            // 
+            // bt_sua
+            // 
+            this.bt_sua.BackColor = System.Drawing.Color.Transparent;
+            this.bt_sua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_sua.BackgroundImage")));
+            this.bt_sua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bt_sua.Enabled = false;
+            this.bt_sua.FlatAppearance.BorderSize = 0;
+            this.bt_sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_sua.Location = new System.Drawing.Point(585, 68);
+            this.bt_sua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_sua.Name = "bt_sua";
+            this.bt_sua.Size = new System.Drawing.Size(59, 46);
+            this.bt_sua.TabIndex = 54;
+            this.bt_sua.UseVisualStyleBackColor = false;
+            // 
+            // bt_reset
+            // 
+            this.bt_reset.BackColor = System.Drawing.Color.Transparent;
+            this.bt_reset.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_reset.BackgroundImage")));
+            this.bt_reset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bt_reset.FlatAppearance.BorderSize = 0;
+            this.bt_reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_reset.Location = new System.Drawing.Point(651, 66);
+            this.bt_reset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_reset.Name = "bt_reset";
+            this.bt_reset.Size = new System.Drawing.Size(57, 46);
+            this.bt_reset.TabIndex = 53;
+            this.bt_reset.UseVisualStyleBackColor = false;
             // 
             // frmNhanVien
             // 
@@ -334,9 +335,9 @@
             this.Text = "frmNhanVien";
             this.Load += new System.EventHandler(this.frmNhanVien_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_nhanvien)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_nhanvien)).EndInit();
             this.ResumeLayout(false);
 
         }

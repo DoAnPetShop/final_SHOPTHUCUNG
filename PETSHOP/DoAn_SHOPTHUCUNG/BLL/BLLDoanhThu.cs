@@ -19,9 +19,18 @@ namespace BLL
         {
             return daldoanhthu.loadDoanhThu(ngay);
         }
-           public List<View_DoanhThu> loadDoanThuTheoThang(DateTime thang)
+        public List<View_DoanhThu> loadDoanThuTheoTien(DateTime ngay)
+        {
+            return daldoanhthu.loadDoanhThuTheoTien(ngay);
+        }
+        public List<View_DoanhThu> loadDoanThuTheoSoLuong(DateTime ngay)
+        {
+            return daldoanhthu.loadDoanhThuTheoSoLuong(ngay);
+        }
+        public List<View_DoanhThu> loadDoanThuTheoThang(DateTime thang)
            {
                return daldoanhthu.loadDoanhThuTheoThang(thang);
            }
+
     }
 }

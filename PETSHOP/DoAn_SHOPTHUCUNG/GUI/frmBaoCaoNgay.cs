@@ -56,13 +56,44 @@ namespace GUI
             double tongtien = 0;
             int sc = dataGridView_doanhthu.Rows.Count;
             for (int i = 0; i < sc; i++)
-                tongtien += double.Parse(dataGridView_doanhthu.Rows[i].Cells[5].Value.ToString());
+                tongtien += double.Parse(dataGridView_doanhthu.Rows[i].Cells[6].Value.ToString());
             txt_tongtien.Text = tongtien.ToString();
         }
       
         private void frmBaoCaoNgay_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bt_thoat_Click(object sender, EventArgs e)
+        {
+            DialogResult h = MessageBox.Show("May co muon thoat khong", "thong bao", MessageBoxButtons.OKCancel);
+            if (h == DialogResult.OK)
+                Application.Exit();
+        }
+
+        private void cb_chucnang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cb_chucnang.SelectedItem.ToString() == "San pham duoc ban ra nhieu nhat")
+            {
+                dataGridView_hienthi.DataSource = blldoanhthu.loadDoanThuTheoSoLuong(dateTimePicker1.Value);
+            }
+            else
+            {
+                dataGridView_hienthi.DataSource = blldoanhthu.loadDoanThuTheoTien(dateTimePicker1.Value);
+            }
+        }
+
+        private void bt_in_Click(object sender, EventArgs e)
+        {
+            TruyenDuLieu.ngaybaocao = dateTimePicker1.Value;
+            frmInBaoCaoNgay frm = new frmInBaoCaoNgay();
+            frm.ShowDialog();
         }
     }
 }

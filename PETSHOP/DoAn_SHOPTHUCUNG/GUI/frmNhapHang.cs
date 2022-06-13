@@ -126,14 +126,30 @@ namespace GUI
                     }
                     if (sanphams != -1)
                     {
-                        if (nhaphangs.MANHAP.Equals(int.Parse(cboMaNhap.SelectedValue.ToString())))
+
+                        if (nhaphangs.MANHAP.Equals(int.Parse(cboMaNhap.SelectedValue.ToString())) && int.Parse(cbo_sp.SelectedValue.ToString()) == sanphams)
                         {
 
                             CTNHAPHANG ct = qlthucung.CTNHAPHANGs.Where(t => t.MANHAP == int.Parse(cboMaNhap.SelectedValue.ToString()) && t.MASP == sanphams).FirstOrDefault();
                             ct.SOLUONG += int.Parse(number.Value.ToString());
-                            ct.DONGIA = decimal.Parse(txt_dongia.Text);                          
+                            ct.DONGIA = decimal.Parse(txt_dongia.Text);
                             qlthucung.SubmitChanges();
                             loadCT();
+                        }
+                        else
+                        {
+
+                            CTNHAPHANG cthd = new CTNHAPHANG();
+                            cthd.MANHAP = int.Parse(cboMaNhap.SelectedValue.ToString());
+
+                            cthd.MASP = int.Parse(cbo_sp.SelectedValue.ToString());
+                            cthd.SOLUONG = int.Parse(number.Value.ToString());
+                            cthd.DONGIA = decimal.Parse(txt_dongia.Text);
+
+                            qlthucung.CTNHAPHANGs.InsertOnSubmit(cthd);
+                            qlthucung.SubmitChanges();
+                            loadCT();
+
                         }
                     }
 
@@ -153,6 +169,80 @@ namespace GUI
                     }
 
                 }
+            }
+        }
+
+        private void bt_mua_Click(object sender, EventArgs e)
+        {
+            if (cboMaNhap.SelectedItem == null)
+            {
+                MessageBox.Show("Vui lòng chọn hóa đơn để thanh toán!!!");
+            }
+            else
+            {
+                DialogResult h = MessageBox.Show
+                   ("Bạn có chắc muốn thanh toán hóa đơn với mã nhập " + cboMaNhap.SelectedValue.ToString() + " không?", "Thông báo", MessageBoxButtons.OKCancel);
+                if (h == DialogResult.OK)
+                {
+                    if (dt_ctnhaphang.RowCount < 1)
+                    {
+                        MessageBox.Show("Chưa có sản phẩm trong hóa đơn nhập hàng!!!");
+                        return;
+                    }
+                    else
+                    {
+                        if (nguoidung.upDateNhapHang(int.Parse(cboMaNhap.SelectedValue.ToString())) != -1)
+                        {
+                            MessageBox.Show("Đã Thanh toán và cập nhật số lượng cho hóa đơn nhập" + cboMaNhap.SelectedValue + "Vào kho");
+                            loadCT();
+                        }
+                    }
+
+
+                }
+
+            }
+        }
+
+        private void btnChon_Click(object sender, EventArgs e)
+        {
+            if (rdoXemTT.Checked)
+            {
+                new frmXemThongTin().Show();
+            }
+        }
+
+        private void bt_luu2_Click(object sender, EventArgs e)
+        {
+            DialogResult h = MessageBox.Show
+             ("Bạn có chắc muốn sửa chi tiết hóa đơn này không?", "Thông báo", MessageBoxButtons.OKCancel);
+            if (h == DialogResult.OK)
+            {
+                int cthd = int.Parse(dt_ctnhaphang.CurrentRow.Cells[0].Value.ToString());
+                CTNHAPHANG ct = qlthucung.CTNHAPHANGs.Where(t => t.MANHAP == cthd).FirstOrDefault();
+                ct.SOLUONG = int.Parse(number.Value.ToString());
+                ct.DONGIA = decimal.Parse(txt_dongia.Text);
+                if (nguoidung.GetSoLuongSanPham(cboMaNhap.SelectedValue.ToString()) < number.Value)
+                {
+                    MessageBox.Show("Không đủ số lượng!!!");
+                    return;
+                }
+                qlthucung.SubmitChanges();
+                loadCT();
+            }
+        }
+
+        private void bt_xoa2_Click(object sender, EventArgs e)
+        {
+            DialogResult h = MessageBox.Show
+                ("Bạn có chắc muốn xóa chi tiết hóa đơn này không?", "Thông báo", MessageBoxButtons.OKCancel);
+            if (h == DialogResult.OK)
+            {
+                int cthd = int.Parse(dt_ctnhaphang.CurrentRow.Cells[0].Value.ToString());
+                CTNHAPHANG ct = qlthucung.CTNHAPHANGs.Where(t => t.MANHAP == cthd).FirstOrDefault();
+                qlthucung.CTNHAPHANGs.DeleteOnSubmit(ct);
+                qlthucung.SubmitChanges();
+                loadCT();
             }
         }
     }

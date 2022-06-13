@@ -30,5 +30,10 @@ namespace GUI
         {
             loadDataG();
         }
+
+        private void bt_xoa_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

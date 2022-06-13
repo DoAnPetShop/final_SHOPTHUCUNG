@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHoaDon));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.bt_sua = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
             this.txt_masp = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -63,7 +64,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.bt_sua = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.number)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -71,6 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SanPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -98,11 +100,28 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi Tiết Hóa Đơn";
             // 
+            // bt_sua
+            // 
+            this.bt_sua.BackColor = System.Drawing.Color.Transparent;
+            this.bt_sua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_sua.BackgroundImage")));
+            this.bt_sua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bt_sua.Enabled = false;
+            this.bt_sua.FlatAppearance.BorderSize = 0;
+            this.bt_sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_sua.Location = new System.Drawing.Point(283, 70);
+            this.bt_sua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_sua.Name = "bt_sua";
+            this.bt_sua.Size = new System.Drawing.Size(59, 46);
+            this.bt_sua.TabIndex = 58;
+            this.bt_sua.UseVisualStyleBackColor = false;
+            this.bt_sua.Click += new System.EventHandler(this.bt_sua_Click);
+            // 
             // btn_xoa
             // 
             this.btn_xoa.BackColor = System.Drawing.Color.Transparent;
             this.btn_xoa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_xoa.BackgroundImage")));
             this.btn_xoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_xoa.Enabled = false;
             this.btn_xoa.FlatAppearance.BorderSize = 0;
             this.btn_xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_xoa.Location = new System.Drawing.Point(347, 18);
@@ -224,6 +243,7 @@
             this.bt_reset.Size = new System.Drawing.Size(57, 46);
             this.bt_reset.TabIndex = 44;
             this.bt_reset.UseVisualStyleBackColor = false;
+            this.bt_reset.Click += new System.EventHandler(this.bt_reset_Click);
             // 
             // groupBox1
             // 
@@ -380,7 +400,7 @@
             this.dataGridView_SanPham.Location = new System.Drawing.Point(60, 434);
             this.dataGridView_SanPham.Name = "dataGridView_SanPham";
             this.dataGridView_SanPham.RowTemplate.Height = 24;
-            this.dataGridView_SanPham.Size = new System.Drawing.Size(751, 204);
+            this.dataGridView_SanPham.Size = new System.Drawing.Size(583, 204);
             this.dataGridView_SanPham.TabIndex = 68;
             this.dataGridView_SanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_SanPham_CellClick);
             // 
@@ -438,26 +458,22 @@
             // 
             this.errorProvider2.ContainerControl = this;
             // 
-            // bt_sua
+            // pictureBox5
             // 
-            this.bt_sua.BackColor = System.Drawing.Color.Transparent;
-            this.bt_sua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_sua.BackgroundImage")));
-            this.bt_sua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bt_sua.FlatAppearance.BorderSize = 0;
-            this.bt_sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_sua.Location = new System.Drawing.Point(283, 70);
-            this.bt_sua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bt_sua.Name = "bt_sua";
-            this.bt_sua.Size = new System.Drawing.Size(59, 46);
-            this.bt_sua.TabIndex = 58;
-            this.bt_sua.UseVisualStyleBackColor = false;
-            this.bt_sua.Click += new System.EventHandler(this.bt_sua_Click);
+            this.pictureBox5.Location = new System.Drawing.Point(651, 434);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(181, 192);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 73;
+            this.pictureBox5.TabStop = false;
             // 
             // frmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(861, 650);
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.bt_mua);
             this.Controls.Add(this.txt_tongtien);
@@ -481,6 +497,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SanPham)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -522,5 +539,6 @@
         private System.Windows.Forms.Button btn_xoa;
         private System.Windows.Forms.Button btn_xoahd;
         private System.Windows.Forms.Button bt_sua;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

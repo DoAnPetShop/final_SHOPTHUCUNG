@@ -91,7 +91,7 @@ namespace GUI
 
         private void bt_in_Click(object sender, EventArgs e)
         {
-            TruyenDuLieu.ngaybaocao = dateTimePicker1.Value;
+           
             frmInBaoCaoNgay frm = new frmInBaoCaoNgay();
             frm.ShowDialog();
         }

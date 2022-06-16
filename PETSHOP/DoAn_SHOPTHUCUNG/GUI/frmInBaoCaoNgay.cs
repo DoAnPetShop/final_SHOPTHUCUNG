@@ -37,6 +37,11 @@ namespace GUI
 
         private void frmInBaoCaoNgay_Load(object sender, EventArgs e)
         {
+            MessageBox.Show(TruyenDuLieu.ngaybaocao.ToString());
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

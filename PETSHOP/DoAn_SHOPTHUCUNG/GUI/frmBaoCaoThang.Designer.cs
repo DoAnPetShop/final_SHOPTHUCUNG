@@ -30,10 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBaoCaoThang));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView_doanhthu = new System.Windows.Forms.DataGridView();
-            this.txt_tongtien = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.dataGridView_hienthi = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cb_chucnang = new System.Windows.Forms.ComboBox();
@@ -43,10 +39,14 @@
             this.bt_thoat = new System.Windows.Forms.Button();
             this.bt_in = new System.Windows.Forms.Button();
             this.bt_tim = new System.Windows.Forms.Button();
+            this.dataGridView_doanhthu = new System.Windows.Forms.DataGridView();
+            this.txt_tongtien = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_doanhthu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_hienthi)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_doanhthu)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -63,46 +63,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(869, 649);
             this.panel1.TabIndex = 26;
-            // 
-            // dataGridView_doanhthu
-            // 
-            this.dataGridView_doanhthu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_doanhthu.Location = new System.Drawing.Point(54, 258);
-            this.dataGridView_doanhthu.Name = "dataGridView_doanhthu";
-            this.dataGridView_doanhthu.RowTemplate.Height = 24;
-            this.dataGridView_doanhthu.Size = new System.Drawing.Size(751, 202);
-            this.dataGridView_doanhthu.TabIndex = 35;
-            // 
-            // txt_tongtien
-            // 
-            this.txt_tongtien.Enabled = false;
-            this.txt_tongtien.Location = new System.Drawing.Point(538, 489);
-            this.txt_tongtien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_tongtien.Multiline = true;
-            this.txt_tongtien.Name = "txt_tongtien";
-            this.txt_tongtien.Size = new System.Drawing.Size(246, 28);
-            this.txt_tongtien.TabIndex = 34;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(365, 493);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(167, 24);
-            this.label10.TabIndex = 33;
-            this.label10.Text = "Tổng Doanh thu:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(211, 18);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(412, 38);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "BÁO CÁO THEO THÁNG";
             // 
             // dataGridView_hienthi
             // 
@@ -140,6 +100,7 @@
             this.cb_chucnang.Name = "cb_chucnang";
             this.cb_chucnang.Size = new System.Drawing.Size(190, 24);
             this.cb_chucnang.TabIndex = 6;
+            this.cb_chucnang.SelectedIndexChanged += new System.EventHandler(this.cb_chucnang_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -205,6 +166,47 @@
             this.bt_tim.Size = new System.Drawing.Size(99, 44);
             this.bt_tim.TabIndex = 2;
             this.bt_tim.UseVisualStyleBackColor = true;
+            this.bt_tim.Click += new System.EventHandler(this.bt_tim_Click_1);
+            // 
+            // dataGridView_doanhthu
+            // 
+            this.dataGridView_doanhthu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_doanhthu.Location = new System.Drawing.Point(54, 258);
+            this.dataGridView_doanhthu.Name = "dataGridView_doanhthu";
+            this.dataGridView_doanhthu.RowTemplate.Height = 24;
+            this.dataGridView_doanhthu.Size = new System.Drawing.Size(751, 202);
+            this.dataGridView_doanhthu.TabIndex = 35;
+            // 
+            // txt_tongtien
+            // 
+            this.txt_tongtien.Enabled = false;
+            this.txt_tongtien.Location = new System.Drawing.Point(538, 489);
+            this.txt_tongtien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_tongtien.Multiline = true;
+            this.txt_tongtien.Name = "txt_tongtien";
+            this.txt_tongtien.Size = new System.Drawing.Size(246, 28);
+            this.txt_tongtien.TabIndex = 34;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(365, 493);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(167, 24);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "Tổng Doanh thu:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(211, 18);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(412, 38);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "BÁO CÁO THEO THÁNG";
             // 
             // frmBaoCaoThang
             // 
@@ -217,10 +219,10 @@
             this.Load += new System.EventHandler(this.frmBaoCaoThang_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_doanhthu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_hienthi)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_doanhthu)).EndInit();
             this.ResumeLayout(false);
 
         }

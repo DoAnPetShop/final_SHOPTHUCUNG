@@ -66,12 +66,12 @@ namespace GUI
             string projectPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
             txt_ma.Text = dataGridView_SanPham.CurrentRow.Cells[0].Value.ToString();
             txt_tensp.Text = dataGridView_SanPham.CurrentRow.Cells[1].Value.ToString();
-            pictureBox5.ImageLocation = dataGridView_SanPham.CurrentRow.Cells[2].Value.ToString();
-            txt_hinh.Text = dataGridView_SanPham.CurrentRow.Cells[2].Value.ToString();
-            number.Value = decimal.Parse(dataGridView_SanPham.CurrentRow.Cells[3].Value.ToString());
-            txt_gia.Text = dataGridView_SanPham.CurrentRow.Cells[4].Value.ToString();
-            txt_mota.Text = dataGridView_SanPham.CurrentRow.Cells[6].Value.ToString();
-            cb_masp.SelectedItem = dataGridView_SanPham.CurrentRow.Cells[7].Value.ToString();
+            pictureBox5.ImageLocation = dataGridView_SanPham.CurrentRow.Cells[7].Value.ToString();
+            txt_hinh.Text = dataGridView_SanPham.CurrentRow.Cells[7].Value.ToString();
+            number.Value = decimal.Parse(dataGridView_SanPham.CurrentRow.Cells[2].Value.ToString());
+            txt_gia.Text = dataGridView_SanPham.CurrentRow.Cells[3].Value.ToString();
+            txt_mota.Text = dataGridView_SanPham.CurrentRow.Cells[5].Value.ToString();
+            cb_masp.SelectedItem = dataGridView_SanPham.CurrentRow.Cells[6].Value.ToString();
         }
 
         private void bt_them_Click(object sender, EventArgs e)

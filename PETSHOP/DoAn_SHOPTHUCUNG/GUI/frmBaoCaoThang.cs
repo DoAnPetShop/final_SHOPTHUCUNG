@@ -76,5 +76,45 @@ namespace GUI
             if (h == DialogResult.OK)
                 Application.Exit();
         }
+
+        private void cb_chucnang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cb_chucnang.SelectedItem.ToString() == "San pham duoc ban ra nhieu nhat")
+            {
+                dataGridView_hienthi.DataSource = blldoanhthu.loadDoanThuTheoSoLuong(dateTimePicker1.Value);
+            }
+            else
+            {
+                dataGridView_hienthi.DataSource = blldoanhthu.loadDoanThuTheoTien(dateTimePicker1.Value);
+            }
+        }
+
+        private void bt_tim_Click_1(object sender, EventArgs e)
+        {
+            int count = 0;
+            double tongThanhTien = 0;
+
+            //---------------Lấy số lượng ruou bán trong ngày cần kiểm tra
+            try
+            {
+
+
+                count = blldemsoluongsp.loadsoluongSPTheoThang(dateTimePicker1.Value);
+            }
+            catch (Exception ex)
+            {
+
+            }
+            if (count > 0)
+            {
+                dataGridView_doanhthu.DataSource = blldoanhthu.loadDoanThuTheoThang(dateTimePicker1.Value);
+                hientongtien();
+            }
+            else
+            {
+                MessageBox.Show("Không có sản phẩm nào được bán trong ngày ");
+            }
+
+        }
     }
 }

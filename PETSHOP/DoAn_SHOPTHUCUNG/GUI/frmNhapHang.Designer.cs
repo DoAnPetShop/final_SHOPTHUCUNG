@@ -31,10 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhapHang));
             this.cboNCC = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.bt_xoa = new System.Windows.Forms.Button();
             this.btnThemSua = new System.Windows.Forms.Button();
             this.cbo_sp = new System.Windows.Forms.ComboBox();
@@ -52,13 +50,13 @@
             this.bt_them = new System.Windows.Forms.Button();
             this.bt_reset = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnChon = new System.Windows.Forms.Button();
             this.rdoXemTT = new System.Windows.Forms.RadioButton();
             this.rdoTim = new System.Windows.Forms.RadioButton();
             this.bt_mua = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.number)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_ctnhaphang)).BeginInit();
@@ -77,16 +75,6 @@
             this.cboNCC.Size = new System.Drawing.Size(126, 24);
             this.cboNCC.TabIndex = 2;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 82);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 17);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Ngày nhập";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -99,9 +87,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.cboNCC);
-            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.bt_xoa);
             this.groupBox1.Controls.Add(this.btnThemSua);
@@ -113,13 +99,6 @@
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập Hàng";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(170, 82);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(126, 22);
-            this.dateTimePicker1.TabIndex = 58;
             // 
             // bt_xoa
             // 
@@ -331,6 +310,19 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
+            // button2
+            // 
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(511, 312);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(127, 111);
+            this.button2.TabIndex = 73;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.btnChon);
@@ -379,6 +371,7 @@
             this.rdoTim.TabStop = true;
             this.rdoTim.Text = "Sắp xếp";
             this.rdoTim.UseVisualStyleBackColor = true;
+            this.rdoTim.CheckedChanged += new System.EventHandler(this.rdoTim_CheckedChanged);
             // 
             // bt_mua
             // 
@@ -397,19 +390,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(511, 312);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 111);
-            this.button2.TabIndex = 73;
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // frmNhapHang
             // 
@@ -437,7 +417,6 @@
         #endregion
         private System.Windows.Forms.Button bt_xoa;
         private System.Windows.Forms.ComboBox cboNCC;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnThemSua;
@@ -456,7 +435,6 @@
         private System.Windows.Forms.DataGridView dt_ctnhaphang;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button bt_mua;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.GroupBox groupBox3;

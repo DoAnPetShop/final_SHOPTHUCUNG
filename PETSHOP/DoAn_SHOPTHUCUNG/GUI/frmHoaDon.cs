@@ -107,9 +107,9 @@ namespace GUI
         private void dataGridView_SanPham_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txt_sp.Text = dataGridView_SanPham.CurrentRow.Cells[1].Value.ToString();
-            pictureBox5.ImageLocation = dataGridView_SanPham.CurrentRow.Cells[2].Value.ToString();
+            pictureBox5.ImageLocation = dataGridView_SanPham.CurrentRow.Cells[7].Value.ToString();
             txt_masp.Text = dataGridView_SanPham.CurrentRow.Cells[0].Value.ToString();
-            txt_dongia.Text = dataGridView_SanPham.CurrentRow.Cells[4].Value.ToString();
+            txt_dongia.Text = dataGridView_SanPham.CurrentRow.Cells[3].Value.ToString();
         }
 
         private void bt_mua_Click(object sender, EventArgs e)
@@ -345,7 +345,15 @@ namespace GUI
 
         private void bt_tim_Click(object sender, EventArgs e)
         {
-            dataGridView_SanPham.DataSource = bllsanpham.loadSanPhamTimKiem(txt_timkiem.Text);
+            if(txt_timkiem.Text == "")
+            {
+                dataGridView_SanPham.DataSource = bllsanpham.loadSanPham();
+            }
+            else
+            {
+                dataGridView_SanPham.DataSource = bllsanpham.loadSanPhamTimKiem(txt_timkiem.Text);
+            }
+            
         }
 
         private void bt_sua_Click(object sender, EventArgs e)

@@ -83,7 +83,7 @@ namespace GUI
                 nh.MACC = cboNCC.SelectedValue.ToString();
 
                 
-                nh.NGAYNHAP = dateTimePicker1.Value;
+                nh.NGAYNHAP = DateTime.Now;
 
                 qlthucung.NHAPHANGs.InsertOnSubmit(nh);
                 qlthucung.SubmitChanges();
@@ -244,6 +244,11 @@ namespace GUI
                 qlthucung.SubmitChanges();
                 loadCT();
             }
+        }
+
+        private void rdoTim_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

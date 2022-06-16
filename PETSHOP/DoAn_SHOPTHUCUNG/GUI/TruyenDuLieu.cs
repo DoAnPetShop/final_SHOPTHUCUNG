@@ -12,6 +12,6 @@ namespace GUI
         public static int thang = 0;
         public static int nam = 0;
         public static int MAHD = 0;
-        public static DateTime ngaybaocao;
+        public static DateTime ngaybaocao = new DateTime(2021, 11, 15);
     }
-}
+} 

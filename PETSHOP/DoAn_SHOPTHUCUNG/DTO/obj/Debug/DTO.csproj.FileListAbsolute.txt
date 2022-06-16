@@ -34,5 +34,4 @@ C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\DTO
 C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\DTO\bin\Debug\tr\CrystalDecisions.Shared.resources.dll
 C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\DTO\bin\Debug\zh-CHS\CrystalDecisions.Shared.resources.dll
 C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\DTO\bin\Debug\zh-CHT\CrystalDecisions.Shared.resources.dll
-C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
 C:\Users\DUYMANH\Documents\GitHub\final_SHOPTHUCUNG\PETSHOP\DoAn_SHOPTHUCUNG\DTO\obj\Debug\DTO.csproj.CopyComplete
